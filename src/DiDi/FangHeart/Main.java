@@ -3,27 +3,23 @@ package DiDi.FangHeart;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by fangheart on 2017/8/26.
- * -23 17 -7 11 -2 1 -34
- */
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> arrayList = new ArrayList<>();
+        ArrayList<Integer> value = new ArrayList<>();
         int a = 0;
         while (sc.hasNext()){
             a = sc.nextInt();
-            arrayList.add(a);
+            value.add(a);
         }
 
         int maxSum = Integer.MIN_VALUE;
         int curSum = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
+        for (int i = 0; i < value.size(); i++) {
             if (curSum<0){
-                curSum=arrayList.get(i);
+                curSum=value.get(i);
             }else {
-                curSum+=arrayList.get(i);
+                curSum+=value.get(i);
             }
 
             if (curSum>maxSum){
