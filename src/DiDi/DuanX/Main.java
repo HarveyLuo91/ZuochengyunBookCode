@@ -15,13 +15,13 @@ public class Main {
             System.out.print(" ");
             int count = 0;
             int temp = value[index];
-            int j = index-1;
-            while(j>=0&&temp<value[j]){
+            int j = index - 1;
+            while (j >= 0 && temp < value[j]) {
                 count++;
-                value[j+1] = value[j];
+                value[j + 1] = value[j];
                 j--;
             }
-            value[j+1] = temp;
+            value[j + 1] = temp;
             System.out.print(count);
             index++;
         }
