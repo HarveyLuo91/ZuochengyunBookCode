@@ -17,6 +17,59 @@ import java.util.Scanner;
 5
 5
  */
+import java.io.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args) throws IOException{
+
+        String numN ="";
+        String nums="";
+
+        Set<Integer> set = new TreeSet<Integer>();
+
+        BufferedReader br = null;
+
+        File file = new File("random.in");
+
+        if(!file.exists()){
+            System.out.println("file not exists!");
+            return;
+        }
+
+        try{
+            br = new BufferedReader(new FileReader("random.in"));
+            numN = br.readLine();
+            nums = br.readLine();
+
+            String[] numStr = nums.split(" ");
+            for (String num:numStr){
+                set.add(Integer.valueOf(num));
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            br.close();
+        }
+
+
+
+        int i = 0;
+        FileWriter fw = new FileWriter("random.out");
+        fw.write(numN);
+        fw.write("\n");
+        for(int a:set){
+            i++;
+            if(i!=set.size())
+                fw.write(a+" ");
+            else
+                fw.write(a);
+        }
+        fw.close();
+
+
+    }
+}
+
 public class Proble_01 {
 
     public static void main(String[] args) {

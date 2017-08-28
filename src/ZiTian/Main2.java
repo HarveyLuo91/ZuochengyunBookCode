@@ -42,11 +42,6 @@ public class Main2 {
                 if((r-ai[i])+max>avg_max){
                     long temp=0;
                     temp=bi[i]*(avg_max-max);
-//        		if((avg_max-max)%bi[i]==0){
-//        			temp=(avg_max-max)/bi[i];
-//        		}else{
-//        			temp=(avg_max-max)/bi[i]+1;
-//        		}
                     zhufu=zhufu+temp;
                     break;
                 }else if((r-ai[i])+max==avg_max){
