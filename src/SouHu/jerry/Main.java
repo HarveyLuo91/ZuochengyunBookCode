@@ -1,5 +1,6 @@
 package SouHu.jerry;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,11 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
+        Long l = (Long) null;
+//        HashMap
+        long s = l;
+        System.out.println(l);
+        System.out.println();
         Scanner sc = new Scanner(System.in);
         int m = sc.nextInt(), n = sc.nextInt();
         int[] nums = new int[n];
