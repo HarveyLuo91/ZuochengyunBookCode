@@ -36,19 +36,34 @@ public class Main2 {
                 root=hashMap.get(i);
             }
         }
-
+        sort(root);
         show(root,-1,true,true);
 
     }
+    public static int  compare1(String a,String b){
+        for (int i=0;i<a.length();i++){
+            if (a.charAt(i)>b.charAt(i)){
+                return 1;
+            }else if (a.charAt(i)<b.charAt(i)){
+                return -1;
+            }
+        }
+        return 1;
+    }
+
     public static void sort(Tree root){
         if (root.nodes.size()>0){
             root.nodes.sort(new Comparator<Tree>() {
                 @Override
                 public int compare(Tree o1, Tree o2) {
-                    return 0;
+                    return compare1(o1.name,o2.name);
                 }
             });
         }
+        for (int i=0;i<root.nodes.size();i++){
+            sort(root.nodes.get(i));
+        }
+
     }
     public static void show(Tree root,int level,boolean last,boolean paLast){
         if (root.name!=null){
