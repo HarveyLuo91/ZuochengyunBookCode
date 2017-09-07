@@ -15,6 +15,7 @@ public class Main {
     }
 
     public static boolean getMin(int[][] hash, int tom_x, int tom_y, int out_x, int out_y, int n, int m, int steps,int[][] hasBeen){
+
         if(!isInscope(n, m, tom_x, tom_y) || hash[tom_x][tom_y] == 1 || hasBeen[tom_x][tom_y] == 1){
             return false;
         }

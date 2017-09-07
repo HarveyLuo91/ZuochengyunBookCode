@@ -49,12 +49,20 @@ public class Main {
                 }
             }
             hashMap.clear();
-            System.out.println(minLength(rect,tom_x,tom_y,out_x,out_y,(HashMap<String,Integer>)hashMap.clone()));
+            int temp=minLength(rect,tom_x,tom_y,out_x,out_y,(HashMap<String,Integer>)hashMap.clone());
+            if (temp==Integer.MAX_VALUE||temp==Integer.MAX_VALUE-1){
+                System.out.println(-1);
+            }else{
+                System.out.println(temp);
+            }
         }
     }
 
     public static int minLength(int [][] rect,int start_x,int start_y,int out_x,int out_y,HashMap<String,Integer> already){
         int min=Integer.MAX_VALUE;
+        if (rect[start_x][start_y]!=0||rect[out_x][out_y]!=0){
+            return Integer.MAX_VALUE-1;
+        }
         if (start_x==out_x&&start_y==out_y){
             return 0;
         }else{
