@@ -24,7 +24,6 @@ public class Main {
         if(tom_x == out_x && tom_y == out_y){
             if(min > steps)
                 min = steps;
-            return true;
         }
         if(getMin(hash, tom_x+1, tom_y, out_x, out_y, n, m, steps, hasBeen)
                 || getMin(hash, tom_x, tom_y+1, out_x, out_y, n, m, steps, hasBeen)
@@ -78,8 +77,8 @@ public class Main {
 
             //遍历
             int[][] hasBeen = new int[n][m];
-
-            if(getMin(hash,tom_x,tom_y,out_x,out_y,n,m,0,hasBeen) == false){
+            getMin(hash,tom_x,tom_y,out_x,out_y,n,m,0,hasBeen);
+            if(min == Integer.MAX_VALUE){
                 System.out.println(-1);
             }else{
                 System.out.println(min-1);

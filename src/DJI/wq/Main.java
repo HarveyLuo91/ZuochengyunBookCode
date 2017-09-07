@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         boolean stop=false;
-        while (!stop){
+        while (scanner.hasNextInt()){
             int n,m;
             n=scanner.nextInt();
             m=scanner.nextInt();
