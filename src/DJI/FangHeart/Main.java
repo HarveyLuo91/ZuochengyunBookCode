@@ -34,7 +34,6 @@ public class Main {
             now+=h;
             double t2 = s - t1;
             now+=t2*(x-y);
-
         }
         if (now>H)
             now = H;
